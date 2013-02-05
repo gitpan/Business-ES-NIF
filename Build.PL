@@ -6,7 +6,7 @@ use Module::Build;
 my $builder = Module::Build->new(
     module_name         => 'Business::ES::NIF',
     license             => 'Artistic_2_0',
-    dist_author         => q{Harun Delgado <trycky@gmail.com>},
+    dist_author         => q{Harun Delgado <hdp@djmania.es>},
     dist_version_from   => 'lib/Business/ES/NIF.pm',
     release_status      => 'stable',
     configure_requires => {
@@ -16,8 +16,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
     },
     requires => {
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
+        'Business::Tax::VAT::Validation' => 0,
     },
     add_to_cleanup     => [ 'Business-ES-NIF-*' ],
     create_makefile_pl => 'traditional',
